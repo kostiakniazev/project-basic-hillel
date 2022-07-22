@@ -1,0 +1,99 @@
+.intro {
+  margin-bottom: 30px;
+  &__introduction {
+    margin-bottom: 30px;
+    &-topic {
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 37px;
+      background: $gradient;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 28px;
+    }
+    &-text {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 19px;
+      line-height: 30px;
+      color: $black;
+    }
+  }
+  &__advantages {
+    &-list {
+      border-left: 4px solid $grey;
+      padding-left: 30px;
+    }
+    &-item {
+      margin-bottom: 40px;
+      &:nth-child(3) {
+          margin-bottom: 0;
+      }
+      &-number {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 44px;
+        background: $gradient;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        display: flex;
+      }
+      &-text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        color: $dark-blue;
+      }
+    }
+    &-top {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      & span {
+        display: flex;
+        margin-right: 15px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .intro {
+    margin-bottom: 60px;
+    &__introduction {
+      &-topic {
+        font-size: 38px;
+        line-height: 46px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .intro {
+    display: flex;
+    &__introduction {
+      width: 56%;
+      margin: 0 28px 0 0;
+    }
+    &__advantages {
+      width: 44%;
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .intro {
+    margin: 0 120px 60px;
+    &__introduction {
+      width: 63%;
+    }
+    &__advantages {
+      width: 37%;
+      padding-left: 0;
+      &-top span {
+        margin-right: 17px;
+      }
+    }  
+  }
+}

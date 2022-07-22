@@ -1,0 +1,93 @@
+.achievements {
+  padding: 30px 0;
+  margin-bottom: 30px;
+  border-bottom: 2px solid $grey
+  ;
+  &__topic {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $dark-blue;
+    margin-bottom: 30px;
+  }
+  &__cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    &-item {
+      background: $white;
+      width: 255px;
+      height: 90px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 12px;
+      &:not(:first-child) {
+        display: none;
+      }
+    }
+     &-img {
+        height: 40px;
+      }
+  }
+  &__slider {
+    display: flex;
+    justify-content: center;
+    &-btn {
+      cursor: pointer;
+      width: 16px;
+      height: 16px;
+      background: $blue;
+      opacity: .2;
+      border-radius: 50%;
+      border: none;
+      margin-left: 15px;
+      transition: .3s;
+      &_active {
+        opacity: 1;
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .achievements {
+    &__cards {
+      flex-direction: row;
+      &-item {
+        width: 25%;
+        &:not(:first-child) {
+          display: flex;
+        }
+        &:not(:nth-child(4n)) {
+          margin-right: 40px;
+        }
+      }
+    }
+    &__slider-btn:not(:nth-child(-n+3)) {
+      display: none;
+    }
+    &__slider-btn:not(:first-child):hover {
+      opacity: .6;
+    }
+  }   
+}
+
+@media screen and (min-width: 1024px) {
+  .achievements {
+    padding: 28px 0;
+    &__cards{
+      &-item {
+        height: 110px;
+      }
+      &-img {
+        height: 60px;
+      }
+    }
+  }
+}

@@ -1,0 +1,109 @@
+.services {
+  padding-bottom: 30px;
+  &__link {
+    padding-bottom: 10px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $blue;
+    display: inline-block;
+    transition: .3s;
+    &-text {
+      margin-right: 4px;
+    }
+  }
+  &__topic {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 37px;
+    background: $gradient;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 30px;
+  }
+  &__card-item {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+  &__card-pic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 92px;
+    height: 92px;
+    border-radius: 24px;
+    background: $white;
+    transition: box-shadow .3s;
+  }
+  &__card-top {
+    padding: 30px 0 15px;
+  }
+  &__card-topic {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 27px;
+    color: $blue;
+    transition: .3s;
+  }
+  &__card-text{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: $white;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .services {
+    padding-bottom: 0;
+    &__link {
+      padding-bottom: 9px;
+      &:hover path {
+        stroke: $hover-blue;
+      }
+      &:hover svg {
+        margin-left: 4px;
+        transform: scale(1.3);
+        transition: .3s;
+      }
+      &:hover {
+        color: $hover-blue;
+      }
+    }
+    &__topic {
+      font-size: 38px;
+      line-height: 46px;
+      margin-bottom: 60px;
+    }
+    &__card {
+      display: flex;
+      flex-wrap: wrap;
+      margin-right: -60px;
+      &-item {
+        width: 50%;
+        padding-right: 60px;
+        margin-bottom: 60px;
+      }
+      &-pic:hover {
+        box-shadow: 0 0 15px $shadow;
+      }
+      &-topic:hover {
+        color: $hover-blue;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .services__card-item {
+    width: 33.33%;
+  }
+}

@@ -1,0 +1,61 @@
+.topic {
+  width: 315px;
+  margin: auto;
+  padding: 135px 0 60px;
+  &__text {
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 46px;
+    padding-bottom: 159px;
+    text-align: center;
+    color: $white;
+  }
+  &__scroll {
+    text-align: center;
+    width: 43px;
+    margin: auto;
+    & a {
+      display: flex;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .topic {
+    width: max-content;
+    padding: 275px 0 90px;
+    &__text {
+      padding-bottom: 417px;
+    }
+    &__scroll {
+      & a:hover {
+        transform: scale(1.2);
+        transition: .3s;
+      }
+      & a:hover path, & a:hover circle {
+        stroke: $crimson;
+        transition: .3s;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .topic {
+    padding-top: 247px;
+    &__text {
+      padding-bottom: 289px;
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .topic {
+    padding: 263px 0 90px;
+    &__text {
+      padding-bottom: 305px;
+    }
+  }
+} 
+
+

@@ -1,0 +1,64 @@
+.more {
+  margin-bottom: 60px;
+  &__box {
+    margin-bottom: 30px;
+    &-text {
+      font-weight: 400;
+      font-size: 19px;
+      line-height: 30px;
+      color: $black;
+    }
+    &-block {
+      display: block;
+      margin: 21px 0;
+      font-weight: 400;
+      font-size: 19px;
+      line-height: 30px;
+      color: $black;
+    }
+  }
+  &__topic {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 37px;
+    background: $gradient;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .more {
+    &__topic {
+      font-size: 38px;
+      line-height: 46px;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .more {
+    display: flex;
+    &__box {
+      width: 57%;
+      margin: 0 60px 0 0;
+    }
+    &__topic {
+      width: 43%;
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .more {
+    margin: 0 120px 60px;
+    &__box {
+      margin-right: 50px;
+      width: 65%;
+    }
+    &__topic {
+      width: 35%;
+    }
+  } 
+}
+

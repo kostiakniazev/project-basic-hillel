@@ -1,0 +1,75 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.body {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+}
+
+.gradient {
+  border-radius: 0px 0px 12px 12px;
+  background: $bg-gradient;
+  position: relative;
+  &::before, &::after {
+    content: '';
+    height: 10px; 
+    border-radius: 0px 0px 12px 12px;
+    position: absolute;
+  }
+  &::before {
+    background: $bg-before;
+    bottom: -20px;
+    left: 40px;
+    right: 40px;
+  }
+  &::after {
+    background: $bg-after;
+    bottom: -10px;
+    left: 20px;
+    right: 20px;
+  } 
+}
+
+.letter {
+  background: url('../img/symbol.svg') no-repeat top center;
+  background-size: 523px;
+}
+
+.container {
+  max-width: 1440px;
+  min-width: 375px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.bg-grey {
+  background: $light-grey;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    padding: 0 60px;
+  }
+  
+  .letter {
+    background-size: 893px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .letter {
+    background-size: 670px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .letter {
+    background-size: 700px;
+  }
+}

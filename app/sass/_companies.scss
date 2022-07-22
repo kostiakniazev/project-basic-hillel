@@ -1,0 +1,117 @@
+.companies {
+  margin: 0 -30px;
+  &__topic {
+    text-align: center;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;    
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #323264;
+    margin-bottom: 30px;
+  }
+  &__cards {
+    &-pic {
+      height: 120px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &_01 {
+        background: $hillel;
+        & img {
+          width: 217px;
+        }
+      }
+      &_02 {
+        background: $wannabiz;
+        & img {
+          width: 199px;
+        }
+      }
+      &_03 {
+        background: $tapgerine;
+        & img {
+          width: 179px;
+        }
+      }
+      &_04 {
+        background: $dlook;
+        & img {
+          width: 180px;
+        }
+      }
+      &_05 {
+        background: $orangear;
+        & img {
+          width: 174px;
+        }
+      }
+      &_06 {
+        background: $adtellige;
+        & img {
+          width: 195px;
+        }
+      }
+      &_07, &_08, &_09, &_10, &_11, &_12 {
+        display: none;
+      }
+      &_07 {
+        background: $clickky;
+        & img {
+          width: 138px;
+        }
+      }
+      &_08 {
+        background: $eco-leasing;
+        & img {
+          width: 146px;
+        }
+      }
+      &_09 {
+        background: $infratek;
+        & img {
+          width: 182px;
+        }
+      }
+      &_10 {
+        background: $city-park;
+        & img {
+          width: 181px;
+        }
+      }
+      &_11 {
+        background: $art-print;
+        & img {
+          width: 189px;
+        }
+      }
+      &_12 {
+        background: $black ;
+        & img {
+          width: 152px;
+        }
+      }
+    } 
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .companies {
+    margin: 0 -60px;
+    &__cards {
+      display: flex;
+      flex-wrap: wrap;
+      &-pic {
+        width: 33.333%;
+        &_07, &_08, &_09, &_10, &_11, &_12 {
+          display: flex;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 1024px) {
+  .companies__cards-pic {
+    width: 25%;
+  }
+}
